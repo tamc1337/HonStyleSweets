@@ -1,0 +1,21 @@
+@media screen and (max-width: 900px) {
+    :root {
+        --img-width: 67vw;
+    }
+}
+@media screen and (max-width:700px) {
+    .features{
+        flex-direction: column;
+    }
+    .features img{
+        width: 30rem;
+    }
+}
+@media screen and (max-width:450px) {
+
+    .product-title,
+    .product-price {
+        font-size: 1rem;
+    }
+}
+

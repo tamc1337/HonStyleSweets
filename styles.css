@@ -1,0 +1,206 @@
+:root{
+  --md-yellow:#EAAA00;
+  --md-red:#9D2235;
+  --img-width: 33vw;
+}
+*{
+  font-family:'Josefin Slab', serif;
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a{
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* Now the custom CSS can begin! - Taylor M.  */
+
+ul{
+	list-style: none;
+  padding: 0;
+}
+header,
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#header {
+  background-color: var(--md-red);
+  color: white;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 5;
+}
+#header .navToggle{
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  font-size: 2.2rem;
+  font-weight: 600;
+  z-index: 10;
+}
+
+#menu {
+  display: none;
+}
+#menu.opened{
+  background-color: var(--md-yellow);
+  color: black;
+  position:fixed;
+  right: 0;
+  top: 85px;
+  padding: 1rem;
+  display: flex;
+  width: fit-content;
+  z-index: 5;
+  border: 2px solid black;
+}
+#menu .inner h2{
+  font-size: 3rem;
+}
+#menu .inner ul a{
+  font-size: 2rem;
+  color: black;
+}
+
+#wrapper{
+  flex-direction: column;
+}
+#page-wrapper{
+  background-image: url("/assets/colin-maynard-chesapeake-unsplash.cropped.jpg");
+  background-size: cover;
+}
+.section-wrapper{
+  /* padding: 0 6vw; */
+  margin: 0 10vw;
+  background: var(--md-yellow);
+}
+.section-wrapper h2{
+  text-align: center; 
+  font-size: 2rem;
+  margin-top: 4rem; 
+}
+.theGoods{
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+.theGoods img{
+  width: 100%;
+}
+.theGoods .display-image{
+  max-width: var(--img-width);
+}
+.theGoods .product-title{
+  position: relative;
+  text-align: center;
+  width: var(--img-width);
+  background-color: rgba(255,255,255,0.8);
+}
+
+.theGoods .product-price{
+  position: relative;
+  bottom: 1.5rem;
+  background-color: rgba(255,255,255,0.8);
+}
+
+.features{
+  flex-wrap: wrap ;
+  display: flex;
+  gap: 3rem;
+}
+.features h3{
+  font-size: 2rem;
+}
+.features img{
+	width: 25rem;
+}
+.copyright{
+  color: white;
+}
+.myname{
+  color: #9D2235;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
